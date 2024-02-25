@@ -1,0 +1,107 @@
+BoxLayout:
+    orientation: "vertical"
+
+    MDTopAppBar:
+        title: "ПВЦ Калкулатор"
+
+    MDBottomNavigation:
+
+        MDBottomNavigationItem:
+            name: "screen 1"
+            text: "Калкулатор"
+            icon: "ruler"
+
+            MDCard:
+                orientation: "vertical"
+                style: "elevated"
+                size_hint: (.9, .9)
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                padding: "10dp"
+
+                MDLabel:
+                    id: h_label
+                    text: "Висина(m):"
+                    halign: "center"
+
+                MDTextField:
+                    id: h_input
+                    multiline: False
+                    mode: "round"
+                    font_size: 14
+
+                MDLabel:
+                    id: w_label
+                    text: "Ширина(m):"
+                    halign: "center"
+
+                MDTextField:
+                    id: w_input
+                    multiline: False
+                    mode: "round"
+                    font_size: 14
+
+                MDLabel:
+                    id: wings_label
+                    text: "Крила:"
+                    halign: "center"
+
+                MDTextField:
+                    id: wings_input
+                    multiline: False
+                    mode: "round"
+                    font_size: 14
+
+                MDLabel:
+                    id: opening_label
+                    text: "Колку крила се отвараат:"
+                    halign: "center"
+
+
+                MDTextField:
+                    id: opening_input
+                    multiline: False
+                    mode: "round"
+                    font_size: 14
+
+                MDLabel:
+                    id: meh_label
+                    text: "Механизам"
+                    halign: "center"
+
+                MDRaisedButton:
+                    id: meh_button
+                    text: "Механизам"
+                    pos_hint: {"center_x": .5}
+                    on_release: app.menu1_open()
+
+                MDLabel:
+                    id: customer_label
+                    text: "Муштерија"
+                    halign: "center"
+
+                MDRaisedButton:
+                    id: customer_button
+                    text: "Муштерија"
+                    pos_hint: {"center_x": .5}
+                    on_release: app.menu2_open()
+
+                MDLabel:
+                    id: price_label
+                    text: ""
+                    halign: "center"
+                    font_size: 30
+
+                MDRaisedButton:
+                    id: calculate_button
+                    text: "Пресметај Цена"
+                    pos_hint: {"center_x": .5}
+                    on_release: app.calculate()
+
+        # MDBottomNavigationItem:
+            # name: "screen 2"
+            # text: "Материјал"
+            # icon: "wrench"
+
+
+
+
